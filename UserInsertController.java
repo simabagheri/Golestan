@@ -29,19 +29,15 @@ public class UserInsertController {
     
     @RequestMapping(method = RequestMethod.GET)
     public String insert(Model model) {
-        Date today = new Date();
-        // Add date to model so it can be display in view
-        List<User> findAllUsers = userManagerImpl.findAllUsers();
-        String s = findAllUsers.toString();
-        System.out.println(s);
-        model.addAttribute("today", "ali");
-        // Return view welcome. Via resolver the view
-        // will be mapped to /WEB-INF/jsp/welcome.jsp
-        User u = new User();
-        u.setId(1008);
-        u.setName("siamak");
-        u.setUsername("ali");
-        userManagerImpl.insertUser(u);
+        
+        
+        //User u = new User();
+        //u.setId(1002);
+       // u.setName("siamak");
+       // u.setUsername("ali");
+       // userManagerImpl.insertUser(u);
+        
+        
         
         return "welcome";
     }
